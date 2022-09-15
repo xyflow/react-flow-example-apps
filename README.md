@@ -4,6 +4,8 @@
 
 This repo contains starting points / references for projects that use [React Flow](https://reactflow.dev).
 
-- [Create React App Example](/reactflow-cra)
-- [Nextjs Example](/reactflow-next)
+- [Create React App Example](/reactflow-create-react-app)
+- [Next.js Example](/reactflow-next)
 - [Remix Example](/reactflow-remix)
+
+Please refer to the [React Flow Docs](https://reactflow.dev/docs) for more information about how to use React Flow.
