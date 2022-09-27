@@ -8,10 +8,16 @@ import ReactFlow, {
   Edge,
 } from 'reactflow';
 
+import CustomNode from './CustomNode';
+
 // this is important! You need to import the styles from the lib to make it work
 import 'reactflow/dist/style.css';
 
 import './Flow.css';
+
+const nodeTypes = {
+  custom: CustomNode,
+};
 
 const initialNodes: Node[] = [
   {
@@ -19,25 +25,22 @@ const initialNodes: Node[] = [
     type: 'input',
     data: { label: 'Node 1' },
     position: { x: 250, y: 5 },
-    className: 'light',
   },
   {
     id: '2',
     data: { label: 'Node 2' },
     position: { x: 100, y: 100 },
-    className: 'light',
   },
   {
     id: '3',
     data: { label: 'Node 3' },
     position: { x: 400, y: 100 },
-    className: 'light',
   },
   {
     id: '4',
     data: { label: 'Node 4' },
     position: { x: 400, y: 200 },
-    className: 'light',
+    type: 'custom',
   },
 ];
 
@@ -63,6 +66,7 @@ function Flow() {
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
         fitView
+        nodeTypes={nodeTypes}
       />
     </div>
   );

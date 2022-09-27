@@ -6,7 +6,9 @@ import ReactFlow, {
   addEdge,
   Connection,
   Edge,
+  ConnectionLineType,
 } from 'reactflow';
+import CustomNode from './CustomNode';
 
 import styles from './Flow.module.css';
 
@@ -16,32 +18,39 @@ const initialNodes: Node[] = [
     type: 'input',
     data: { label: 'Node 1' },
     position: { x: 250, y: 5 },
-    className: 'light',
   },
   {
     id: '2',
     data: { label: 'Node 2' },
     position: { x: 100, y: 100 },
-    className: 'light',
   },
   {
     id: '3',
     data: { label: 'Node 3' },
     position: { x: 400, y: 100 },
-    className: 'light',
   },
   {
     id: '4',
     data: { label: 'Node 4' },
     position: { x: 400, y: 200 },
-    className: 'light',
+    type: 'custom',
+    className: styles.customNode,
   },
 ];
 
 const initialEdges: Edge[] = [
-  { id: 'e1-2', source: '1', target: '2', animated: true },
-  { id: 'e1-3', source: '1', target: '3', animated: true },
+  { id: 'e1-2', source: '1', target: '2' },
+  { id: 'e1-3', source: '1', target: '3' },
 ];
+
+const nodeTypes = {
+  custom: CustomNode,
+};
+
+const defaultEdgeOptions = {
+  animated: true,
+  type: 'smoothstep',
+};
 
 function Flow() {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
@@ -59,6 +68,9 @@ function Flow() {
         edges={edges}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        nodeTypes={nodeTypes}
+        defaultEdgeOptions={defaultEdgeOptions}
+        connectionLineType={ConnectionLineType.SmoothStep}
         fitView
       />
     </div>
