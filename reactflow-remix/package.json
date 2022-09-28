@@ -12,7 +12,7 @@
     "@remix-run/serve": "^1.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "reactflow": "^11.0.0-next.13"
+    "reactflow": "^11.0.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.7.0",
