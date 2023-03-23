@@ -1,8 +1,5 @@
 import { memo, FC, CSSProperties } from 'react';
 import { Handle, Position, NodeProps } from 'reactflow';
-import { NodeResizer } from '@reactflow/node-resizer';
-
-import '@reactflow/node-resizer/dist/style.css';
 
 const sourceHandleStyleA: CSSProperties = { left: 50 };
 const sourceHandleStyleB: CSSProperties = {
@@ -13,7 +10,6 @@ const sourceHandleStyleB: CSSProperties = {
 const CustomNode: FC<NodeProps> = ({ data, xPos, yPos }) => {
   return (
     <>
-      <NodeResizer />
       <Handle type="target" position={Position.Top} />
       <div>
         <div>
