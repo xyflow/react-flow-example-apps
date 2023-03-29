@@ -1,11 +1,11 @@
 import { useCallback } from 'react';
 import ReactFlow, {
-  Node,
+  addEdge,
   useNodesState,
   useEdgesState,
-  addEdge,
-  Connection,
-  Edge,
+  type Connection,
+  type Edge,
+  type Node,
 } from 'reactflow';
 
 import CustomNode from './CustomNode';

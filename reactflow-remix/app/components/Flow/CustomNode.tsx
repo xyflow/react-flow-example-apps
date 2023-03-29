@@ -1,5 +1,5 @@
-import { memo, FC, CSSProperties } from 'react';
-import { Handle, Position, NodeProps } from 'reactflow';
+import { memo, type FC, type CSSProperties } from 'react';
+import { Handle, Position, type NodeProps } from 'reactflow';
 
 const sourceHandleStyleA: CSSProperties = { left: 50 };
 const sourceHandleStyleB: CSSProperties = {

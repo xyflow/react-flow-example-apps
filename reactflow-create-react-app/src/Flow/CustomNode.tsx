@@ -1,5 +1,5 @@
-import { memo, FC, CSSProperties } from 'react';
-import { Handle, Position, NodeProps } from 'reactflow';
+import { memo, type FC, type CSSProperties } from 'react';
+import { Handle, Position, type NodeProps, NodeResizer } from 'reactflow';
 
 const sourceHandleStyleA: CSSProperties = { left: 50 };
 const sourceHandleStyleB: CSSProperties = {
@@ -10,6 +10,7 @@ const sourceHandleStyleB: CSSProperties = {
 const CustomNode: FC<NodeProps> = ({ data, xPos, yPos }) => {
   return (
     <>
+      <NodeResizer />
       <Handle type="target" position={Position.Top} />
       <div>
         <div>
