@@ -12,7 +12,7 @@
     "next": "^13.4.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "reactflow": "^11.7.4"
+    "reactflow": "^11.8.1"
   },
   "devDependencies": {
     "@types/node": "20.4.6",
