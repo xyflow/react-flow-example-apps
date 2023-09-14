@@ -8,3 +8,6 @@ dist
 .log
 
 .rollup.cache
+
+.yalc
+yalc.lock
