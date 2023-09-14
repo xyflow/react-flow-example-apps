@@ -1,0 +1,21 @@
+---
+import Flow from '../components/Flow'
+
+import '../styles/global.css';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<div class="app">
+			<header class="app-header">React Flow - Astro Example</header>
+			<Flow client:load />
+		</div>
+	</body>
+</html>
