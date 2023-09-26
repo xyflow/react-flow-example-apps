@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@reactflow/core": "file:.yalc/@reactflow/core",
+    "@reactflow/core": "^11.9.0",
     "astro": "^3.0.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
