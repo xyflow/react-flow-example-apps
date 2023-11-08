@@ -8,4 +8,4 @@ This repo contains starting points / references for projects that use [React Flo
 - [Next.js Example](/reactflow-nextjs)
 - [Remix Example](/reactflow-remix)
 
-Please refer to the [React Flow Docs](https://reactflow.dev/docs) for more information about how to use React Flow.
+Please refer to the [React Flow Docs](https://reactflow.dev/learn) for more information about how to use React Flow.
