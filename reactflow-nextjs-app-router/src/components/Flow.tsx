@@ -1,57 +1,43 @@
-'use client';
-
-import { useCallback, useState } from 'react';
-import ReactFlow, {
+import { useCallback } from "react";
+import {
+  Background,
+  Controls,
+  MiniMap,
+  ReactFlow,
   addEdge,
-  Node,
-  Edge,
-  applyNodeChanges,
-  applyEdgeChanges,
-  OnNodesChange,
-  OnEdgesChange,
-  OnConnect,
-} from 'reactflow';
+  useNodesState,
+  useEdgesState,
+  type OnConnect,
+} from "@xyflow/react";
 
-import 'reactflow/dist/style.css';
+import "@xyflow/react/dist/style.css";
 
-export default function App({
-  nodes: initNodes,
-  edges: initEdges,
-}: {
-  nodes: Node[];
-  edges: Edge[];
-}) {
-  const [nodes, setNodes] = useState<Node[]>(initNodes);
-  const [edges, setEdges] = useState<Edge[]>(initEdges);
+import { initialNodes, nodeTypes, type CustomNodeType } from "./nodes";
+import { initialEdges, edgeTypes, type CustomEdgeType } from "./edges";
 
-  const onNodesChange: OnNodesChange = useCallback(
-    (chs) => {
-      setNodes((nds) => applyNodeChanges(chs, nds));
-    },
-    [setNodes]
-  );
-
-  const onEdgesChange: OnEdgesChange = useCallback(
-    (chs) => {
-      setEdges((eds) => applyEdgeChanges(chs, eds));
-    },
-    [setEdges]
-  );
-
+export default function App() {
+  const [nodes, , onNodesChange] = useNodesState<CustomNodeType>(initialNodes);
+  const [edges, setEdges, onEdgesChange] =
+    useEdgesState<CustomEdgeType>(initialEdges);
   const onConnect: OnConnect = useCallback(
-    (params) => setEdges((eds) => addEdge(params, eds)),
+    (connection) => setEdges((edges) => addEdge(connection, edges)),
     [setEdges]
   );
 
   return (
-    <div style={{ width: '100vw', height: '100vh' }}>
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        onConnect={onConnect}
-      />
-    </div>
+    <ReactFlow<CustomNodeType, CustomEdgeType>
+      nodes={nodes}
+      nodeTypes={nodeTypes}
+      onNodesChange={onNodesChange}
+      edges={edges}
+      edgeTypes={edgeTypes}
+      onEdgesChange={onEdgesChange}
+      onConnect={onConnect}
+      fitView
+    >
+      <Background />
+      <MiniMap />
+      <Controls />
+    </ReactFlow>
   );
 }

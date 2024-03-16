@@ -1,27 +1,36 @@
-# React Flow Example App - Remix
+# Welcome to Remix + Vite!
 
-This app was bootstrapped with [`create-remix`](https://remix.run/docs/en/v1/tutorials/blog).
+📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/future/vite) for details on supported features.
 
-## Installation
+## Development
 
-```sh
-npm install
+Run the Vite dev server:
+
+```shellscript
+npm run dev
 ```
 
-### Start Dev Server
+## Deployment
 
-```sh
-npm start
-```
-
-Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### Build
+First, build your app for production:
 
 ```sh
 npm run build
 ```
 
-## Remix Docs
+Then run the app in production mode:
 
-Please refer to the [Remix docs](https://remix.run/docs/en/v1) for more information.
+```sh
+npm start
+```
+
+Now you'll need to pick a host to deploy it to.
+
+### DIY
+
+If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+
+Make sure to deploy the output of `npm run build`
+
+- `build/server`
+- `build/client`
