@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@xyflow/react": "^12.0.0-next.11",
+    "@xyflow/react": "^12.0.0-next.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

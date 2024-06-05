@@ -10,7 +10,7 @@
     "@types/node": "^20.11.27",
     "@types/react": "^18.2.65",
     "@types/react-dom": "^18.2.22",
-    "@xyflow/react": "^12.0.0-next.11",
+    "@xyflow/react": "^12.0.0-next.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
