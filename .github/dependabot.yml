@@ -7,3 +7,6 @@ updates:
     directory: "/reactflow-vite" 
     schedule:
       interval: "weekly"
+    allow:
+      dependency-name: '@xyflow/react'
+      dependency-name: 'reactflow'
