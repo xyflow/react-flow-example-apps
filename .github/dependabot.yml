@@ -4,6 +4,48 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
+    directory: "/reactflow-astro" 
+    schedule:
+      interval: "weekly"
+    allow:
+      dependency-name: '@xyflow/react'
+      dependency-name: 'reactflow'
+  - package-ecosystem: "npm"
+    directory: "/reactflow-create-react-app" 
+    schedule:
+      interval: "weekly"
+    allow:
+      dependency-name: '@xyflow/react'
+      dependency-name: 'reactflow'
+  - package-ecosystem: "npm"
+    directory: "/reactflow-create-react-app-react17" 
+    schedule:
+      interval: "weekly"
+    allow:
+      dependency-name: '@xyflow/react'
+      dependency-name: 'reactflow'
+  - package-ecosystem: "npm"
+    directory: "/reactflow-nextjs" 
+    schedule:
+      interval: "weekly"
+    allow:
+      dependency-name: '@xyflow/react'
+      dependency-name: 'reactflow'
+  - package-ecosystem: "npm"
+    directory: "/reactflow-nextjs-app-router" 
+    schedule:
+      interval: "weekly"
+    allow:
+      dependency-name: '@xyflow/react'
+      dependency-name: 'reactflow'
+  - package-ecosystem: "npm"
+    directory: "/reactflow-remix" 
+    schedule:
+      interval: "weekly"
+    allow:
+      dependency-name: '@xyflow/react'
+      dependency-name: 'reactflow'
+  - package-ecosystem: "npm"
     directory: "/reactflow-vite" 
     schedule:
       interval: "weekly"
