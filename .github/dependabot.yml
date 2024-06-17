@@ -1,0 +1,9 @@
+# configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/reactflow-vite" 
+    schedule:
+      interval: "weekly"
