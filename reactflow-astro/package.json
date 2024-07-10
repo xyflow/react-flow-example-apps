@@ -10,8 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@reactflow/core": "^11.10.4",
-    "@xyflow/react": "^12.0.0-next.19",
+    "@xyflow/react": "^12.0.0",
     "astro": "^4.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
